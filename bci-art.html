@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brain-Computer Interface and Gesture Control for Robotic Drawing</title>
+  <title>Brain-Computer Interface &amp; Robotic Control | Thendral Prabu</title>
   <meta name="description"
     content="Developing non-invasive EEG neural interfaces at PUSH Studio that allow people with limb differences to create digital art and control robotic assistive tools.">
 
@@ -32,14 +32,31 @@
   <header class="site-header">
     <div class="header-inner">
       <div class="breadcrumb">
-        <a href="index.html" class="site-brand">Thendral Prabu</a>
+        <a href="index.html" class="site-brand" aria-label="Thendral Prabu">
+          <img src="assets/images/logo-2-1.webp" alt="Thendral Prabu" class="site-brand-logo" height="76">
+        </a>
         <span class="crumb-separator">/</span>
         <span class="crumb-current">BCI Art System</span>
       </div>
 
       <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
         <a href="index.html#about" class="nav-link">About</a>
-        <a href="index.html#projects" class="nav-link active">Projects</a>
+        <div class="nav-dropdown">
+          <a href="index.html#projects" class="nav-link dropdown-toggle active" id="projectsDropdown" role="button"
+            aria-expanded="false" aria-haspopup="true">
+            Projects <span class="dropdown-arrow" aria-hidden="true">▾</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+            <a href="index.html#projects" class="dropdown-item">All Projects</a>
+            <div class="dropdown-divider"></div>
+            <a href="robot-interrupted.html" class="dropdown-item">Robot Interrupted</a>
+            <a href="bci-art.html" class="dropdown-item active">BCI for Art Therapy</a>
+            <a href="vr-navigation.html" class="dropdown-item">VR Navigation Training</a>
+            <a href="cta-rebrand.html" class="dropdown-item">CTA Transit App</a>
+            <a href="mason.html" class="dropdown-item">Mason &amp; Strings</a>
+            <a href="theatrical-designs.html" class="dropdown-item">Theatrical Scenic Design</a>
+          </div>
+        </div>
         <a href="index.html#experience" class="nav-link">Experience</a>
         <a href="https://docs.google.com/document/d/14E_JzivV2DPRkLA8vcDeKpXIuigVomZk/edit?usp=drive_link&ouid=115083563516231911825&rtpof=true&sd=true"
           target="_blank" rel="noopener noreferrer" class="nav-link cv-link">
@@ -78,8 +95,7 @@
         <span class="meta-separator">·</span>
         <span>Brain-Computer Interfaces &amp; Assistive Tech</span>
       </div>
-      <h1 class="project-main-title">Brain-Computer Interface and Gesture Control for Robotic Drawing &amp; Robotic
-        Control</h1>
+      <h1 class="project-main-title">BCI &amp; Gesture-Driven Robotic Control</h1>
       <p class="project-lead">
         A year of research into whether a person without fine motor control could direct a drawing robot. After the EEG
         headset proved too unreliable, the project moved to camera-based gesture tracking. This is an early-stage
@@ -154,7 +170,7 @@
         <section class="figure-slider" aria-roledescription="carousel" aria-label="Training the gesture model">
           <div class="slides">
 
-            <figure class="slide" aria-roledescription="slide" aria-label="2 of 3" hidden>
+            <figure class="slide" aria-roledescription="slide" aria-label="1 of 2" hidden>
               <img src="assets/images/mediapipe_gesture.png"
                 alt="Screenshot of the training interface showing gesture labels." width="1280" height="720"
                 loading="lazy">
@@ -162,7 +178,7 @@
               </figcaption>
             </figure>
 
-            <figure class="slide" aria-roledescription="slide" aria-label="3 of 3" hidden>
+            <figure class="slide" aria-roledescription="slide" aria-label="2 of 2" hidden>
               <img src="assets/images/mediapipe_training.png" alt="Screenshot of MediaPipe's face landmark training."
                 width="1280" height="720" loading="lazy">
               <figcaption>Screenshot of MediaPipe's face landmark training
@@ -173,7 +189,7 @@
 
           <div class="slider-controls">
             <button type="button" class="prev" aria-label="Previous slide">&larr; Previous</button>
-            <span class="slide-count" aria-live="polite">1 of 3</span>
+            <span class="slide-count" aria-live="polite">1 of 2</span>
             <button type="button" class="next" aria-label="Next slide">Next &rarr;</button>
           </div>
         </section>

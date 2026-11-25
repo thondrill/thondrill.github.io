@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VR Navigation Training: Haptic Sensory Feedback — Thendral Prabu</title>
-  <meta name="description" content="Virtual reality training environment paired with Arduino vibration motors allowing visually impaired navigators to develop spatial cognitive maps without fear of physical harm.">
-  
+  <title>VR Navigation Training | Thendral Prabu</title>
+  <meta name="description"
+    content="Virtual reality training environment paired with Arduino vibration motors allowing visually impaired navigators to develop spatial cognitive maps without fear of physical harm.">
+
   <meta property="og:title" content="VR Navigation Training — Thendral Prabu">
-  <meta property="og:description" content="Accessible VR and haptic physical computing research for non-visual indoor wayfinding.">
+  <meta property="og:description"
+    content="Accessible VR and haptic physical computing research for non-visual indoor wayfinding.">
   <meta property="og:image" content="assets/images/project_vr_nav.png">
   <link rel="icon" type="image/png" href="assets/images/thendral_icon.png">
 
   <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="page-project-detail">
   <!-- Accessibility Skip Link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -26,27 +32,47 @@
   <header class="site-header">
     <div class="header-inner">
       <div class="breadcrumb">
-        <a href="index.html" class="site-brand">Thendral Prabu</a>
+        <a href="index.html" class="site-brand" aria-label="Thendral Prabu">
+          <img src="assets/images/logo-2-1.webp" alt="Thendral Prabu" class="site-brand-logo" height="76">
+        </a>
         <span class="crumb-separator">/</span>
         <span class="crumb-current">VR Navigation Training</span>
       </div>
-      
+
       <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
         <a href="index.html#about" class="nav-link">About</a>
-        <a href="index.html#projects" class="nav-link active">Projects</a>
+        <div class="nav-dropdown">
+          <a href="index.html#projects" class="nav-link dropdown-toggle active" id="projectsDropdown" role="button"
+            aria-expanded="false" aria-haspopup="true">
+            Projects <span class="dropdown-arrow" aria-hidden="true">▾</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+            <a href="index.html#projects" class="dropdown-item">All Projects</a>
+            <div class="dropdown-divider"></div>
+            <a href="robot-interrupted.html" class="dropdown-item">Robot Interrupted</a>
+            <a href="bci-art.html" class="dropdown-item">BCI for Art Therapy</a>
+            <a href="vr-navigation.html" class="dropdown-item active">VR Navigation Training</a>
+            <a href="cta-rebrand.html" class="dropdown-item">CTA Transit App</a>
+            <a href="mason.html" class="dropdown-item">Mason &amp; Strings</a>
+            <a href="theatrical-designs.html" class="dropdown-item">Theatrical Scenic Design</a>
+          </div>
+        </div>
         <a href="index.html#experience" class="nav-link">Experience</a>
-        <a href="https://docs.google.com/document/d/14E_JzivV2DPRkLA8vcDeKpXIuigVomZk/edit?usp=drive_link&ouid=115083563516231911825&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="nav-link cv-link">
+        <a href="https://docs.google.com/document/d/14E_JzivV2DPRkLA8vcDeKpXIuigVomZk/edit?usp=drive_link&ouid=115083563516231911825&rtpof=true&sd=true"
+          target="_blank" rel="noopener noreferrer" class="nav-link cv-link">
           CV <span class="ext-icon" aria-hidden="true">↗</span>
         </a>
         <a href="index.html#contact" class="nav-link">Contact</a>
       </nav>
 
       <div class="header-actions">
-        <button type="button" class="theme-toggle" id="btnThemeToggle" aria-label="Toggle light and dark color mode" title="Toggle theme">
+        <button type="button" class="theme-toggle" id="btnThemeToggle" aria-label="Toggle light and dark color mode"
+          title="Toggle theme">
           <span class="theme-icon light-icon" aria-hidden="true">☀️</span>
           <span class="theme-icon dark-icon" aria-hidden="true">🌙</span>
         </button>
-        <button type="button" class="mobile-menu-toggle" id="btnMobileMenu" aria-label="Toggle mobile menu" aria-expanded="false">
+        <button type="button" class="mobile-menu-toggle" id="btnMobileMenu" aria-label="Toggle mobile menu"
+          aria-expanded="false">
           <span class="menu-bar"></span>
           <span class="menu-bar"></span>
           <span class="menu-bar"></span>
@@ -57,7 +83,7 @@
 
   <!-- Main Article Container -->
   <main class="project-container" id="main-content">
-    
+
     <div class="project-back-nav">
       <a href="index.html#projects" class="back-link">← Back to All Projects</a>
     </div>
@@ -69,9 +95,11 @@
         <span class="meta-separator">·</span>
         <span>HCI &amp; Physical Computing Research</span>
       </div>
-      <h1 class="project-main-title">VR Navigation Training: Haptic Sensory Feedback for Non-Visual Wayfinding</h1>
+      <h1 class="project-main-title">VR Navigation Training</h1>
       <p class="project-lead">
-        Visually impaired individuals face a dearth of tools to navigate indoor spaces safely. By pairing an interactive virtual reality simulation with Arduino-controlled haptic vibration motors, users safely build robust spatial mental models of unfamiliar architectural layouts without fear of physical harm.
+        Visually impaired individuals face a dearth of tools to navigate indoor spaces safely. By pairing an interactive
+        virtual reality simulation with Arduino-controlled haptic vibration motors, users safely build robust spatial
+        mental models of unfamiliar architectural layouts without fear of physical harm.
       </p>
 
       <!-- Structured Project Metadata (as documented on Framer site) -->
@@ -101,24 +129,35 @@
 
     <!-- Main Showcase Visual from Framer -->
     <figure class="project-hero-figure">
-      <img src="assets/images/framer/uWSRVtz0PIrURDF8ZTa6Uim5JU.png" alt="VR Navigation Training overview diagram and architectural simulation interface" class="lightbox-trigger" data-full="assets/images/framer/uWSRVtz0PIrURDF8ZTa6Uim5JU.png" data-caption="VR Navigation Training: Simulation Overview &amp; Haptic Actuator Integration">
-      <figcaption class="figure-caption">System architecture connecting Unity 3D virtual environment raycasting to Arduino haptic vibration actuators.</figcaption>
+      <img src="assets/images/framer/uWSRVtz0PIrURDF8ZTa6Uim5JU.png"
+        alt="VR Navigation Training overview diagram and architectural simulation interface" class="lightbox-trigger"
+        data-full="assets/images/framer/uWSRVtz0PIrURDF8ZTa6Uim5JU.png"
+        data-caption="VR Navigation Training: Simulation Overview &amp; Haptic Actuator Integration">
+      <figcaption class="figure-caption">System architecture connecting Unity 3D virtual environment raycasting to
+        Arduino haptic vibration actuators.</figcaption>
     </figure>
 
     <!-- Narrative Content -->
     <article class="project-body prose">
-      
+
       <section class="case-section">
         <h2>1. The Assistive Gap in Indoor Wayfinding</h2>
         <p>
-          Outdoor navigation for blind and visually impaired people is supported by well-established aids: white canes, guide dogs, tactile paving, and audio-guided GPS systems. In stark contrast, indoor spaces present irregular, high-density obstacles: shifting furniture, recessed alcoves, stairs, and narrow doorways.
+          Outdoor navigation for blind and visually impaired people is supported by well-established aids: white canes,
+          guide dogs, tactile paving, and audio-guided GPS systems. In stark contrast, indoor spaces present irregular,
+          high-density obstacles: shifting furniture, recessed alcoves, stairs, and narrow doorways.
         </p>
         <p>
-          Learning an unfamiliar indoor floorplan in the physical world carries a constant risk of physical collision, bruising, and high cognitive stress. The goal of this research was to investigate whether virtual reality, decoupled from physical danger, could serve as an effective pre-visit cognitive mapping tool.
+          Learning an unfamiliar indoor floorplan in the physical world carries a constant risk of physical collision,
+          bruising, and high cognitive stress. The goal of this research was to investigate whether virtual reality,
+          decoupled from physical danger, could serve as an effective pre-visit cognitive mapping tool.
         </p>
         <div class="callout-quote">
           <blockquote>
-            "Visually impaired people face a dearth of research around tools to navigate indoor settings, having tools better equipped for outdoor settings like guide dogs and canes. In an effort to design a tool better equipped for indoor settings, I designed a virtual reality experience in which the user would navigate their environment using vibration motors to develop their spatial memory without fear of physical harm."
+            "Visually impaired people face a dearth of research around tools to navigate indoor settings, having tools
+            better equipped for outdoor settings like guide dogs and canes. In an effort to design a tool better
+            equipped for indoor settings, I designed a virtual reality experience in which the user would navigate their
+            environment using vibration motors to develop their spatial memory without fear of physical harm."
           </blockquote>
           <cite>— Project Thesis &amp; Research Statement</cite>
         </div>
@@ -127,37 +166,53 @@
       <section class="case-section">
         <h2>2. Physical Computing &amp; Tactile Encoding</h2>
         <p>
-          Working under the guidance of my computer science faculty mentor at TCNJ, I engineered a low-latency bridge between a Unity 3D simulation and a wearable Arduino hardware array.
+          Working under the guidance of my computer science faculty mentor at TCNJ, I engineered a low-latency bridge
+          between a Unity 3D simulation and a wearable Arduino hardware array.
         </p>
-        
+
         <figure class="figure-center">
-          <img src="assets/images/project_vr_nav.png" alt="Haptic vibration actuator interface and VR wayfinding simulation screen" class="lightbox-trigger" data-full="assets/images/project_vr_nav.png" data-caption="VR Navigation Training: Virtual Room Layout &amp; Sensor Feedback">
-          <figcaption class="figure-caption">Virtual reality test environment where participants probe room perimeters and avoid interior obstacles via tactile cues.</figcaption>
+          <img src="assets/images/project_vr_nav.png"
+            alt="Haptic vibration actuator interface and VR wayfinding simulation screen" class="lightbox-trigger"
+            data-full="assets/images/project_vr_nav.png"
+            data-caption="VR Navigation Training: Virtual Room Layout &amp; Sensor Feedback">
+          <figcaption class="figure-caption">Virtual reality test environment where participants probe room perimeters
+            and avoid interior obstacles via tactile cues.</figcaption>
         </figure>
 
         <p>
-          We designed a continuous tactile encoding scheme using miniature eccentric rotating mass (ERM) vibration motors:
+          We designed a continuous tactile encoding scheme using miniature eccentric rotating mass (ERM) vibration
+          motors:
         </p>
         <ul>
-          <li><strong>Clearance State (&gt; 2.0 meters):</strong> Complete motor silence, indicating uninhibited movement forward.</li>
-          <li><strong>Approach Warning (0.8m – 2.0m):</strong> Low-frequency rhythmic pulsing that accelerates as proximity to an obstacle decreases.</li>
-          <li><strong>Immediate Boundary (&lt; 0.5 meters):</strong> High-frequency continuous buzzing, simulating the tactile boundary feedback of a cane contact.</li>
-          <li><strong>Binaural Ambient Anchors:</strong> Spatialized sound cues (such as the steady hum of a ventilation fan or the click of a wall clock) provided directional reference points.</li>
+          <li><strong>Clearance State (&gt; 2.0 meters):</strong> Complete motor silence, indicating uninhibited
+            movement forward.</li>
+          <li><strong>Approach Warning (0.8m – 2.0m):</strong> Low-frequency rhythmic pulsing that accelerates as
+            proximity to an obstacle decreases.</li>
+          <li><strong>Immediate Boundary (&lt; 0.5 meters):</strong> High-frequency continuous buzzing, simulating the
+            tactile boundary feedback of a cane contact.</li>
+          <li><strong>Binaural Ambient Anchors:</strong> Spatialized sound cues (such as the steady hum of a ventilation
+            fan or the click of a wall clock) provided directional reference points.</li>
         </ul>
       </section>
 
       <section class="case-section">
         <h2>3. Evaluation &amp; Spatial Memory Formation</h2>
         <p>
-          Participants completed exploratory trials navigating virtual rooms with varying obstacle densities. Following virtual exploration, participants performed non-visual sketch-mapping and orientation recall tasks.
+          Participants completed exploratory trials navigating virtual rooms with varying obstacle densities. Following
+          virtual exploration, participants performed non-visual sketch-mapping and orientation recall tasks.
         </p>
         <p>
-          The findings confirmed that tactile haptic feedback in VR successfully stimulated spatial cognitive map construction:
+          The findings confirmed that tactile haptic feedback in VR successfully stimulated spatial cognitive map
+          construction:
         </p>
         <ul>
-          <li><strong>Transferable Orientation:</strong> Users identified key room landmarks (doors, tables, exits) and retained their relative spatial orientations.</li>
-          <li><strong>Zero Physical Hazard:</strong> Users could freely test navigational boundaries, bump into virtual walls, and self-correct with complete psychological safety.</li>
-          <li><strong>Low Hardware Overhead:</strong> The prototype utilized accessible, off-the-shelf microcontrollers and motors that cost under $40, establishing a practical model for clinics, schools, and transit centers.</li>
+          <li><strong>Transferable Orientation:</strong> Users identified key room landmarks (doors, tables, exits) and
+            retained their relative spatial orientations.</li>
+          <li><strong>Zero Physical Hazard:</strong> Users could freely test navigational boundaries, bump into virtual
+            walls, and self-correct with complete psychological safety.</li>
+          <li><strong>Low Hardware Overhead:</strong> The prototype utilized accessible, off-the-shelf microcontrollers
+            and motors that cost under $40, establishing a practical model for clinics, schools, and transit centers.
+          </li>
         </ul>
       </section>
 
@@ -205,7 +260,8 @@
         &copy; 2026 Thendral Prabu · Chicago, Illinois. Accessible Creative Technologist &amp; HCI Researcher.
       </p>
       <div class="footer-actions">
-        <a href="index.html" class="back-to-top">Home</a> · <a href="#main-content" class="back-to-top">Back to top ↑</a>
+        <a href="index.html" class="back-to-top">Home</a> · <a href="#main-content" class="back-to-top">Back to top
+          ↑</a>
       </div>
     </div>
   </footer>
@@ -221,5 +277,5 @@
 
   <script src="app.js"></script>
 </body>
-</html>
 
+</html>

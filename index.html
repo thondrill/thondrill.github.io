@@ -4,12 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thendral Prabu — Accessible Creative Technologist &amp; HCI Researcher</title>
-  <meta name="description"
-    content="Personal and academic website of Thendral Prabu, M.S. HCI candidate at DePaul University and Research Assistant at PUSH Studio focusing on brain-computer interfaces, accessibility, and emerging technologies.">
+  <title>Thendral Prabu</title>
+  <meta name="description" content="Personal and academic website of Thendral Prabu">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Thendral Prabu — Accessible Creative Technologist &amp; HCI Researcher">
+  <meta property="og:title" content="Thendral Prabu">
   <meta property="og:description"
     content="M.S. HCI Candidate at DePaul University · Research Assistant at PUSH Studio working on Brain-Computer Interfaces and Accessible Emerging Tech.">
   <meta property="og:image" content="assets/images/thendral_og.png">
@@ -33,15 +32,33 @@
   <!-- Minimal Top Navigation Bar -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="#about" class="site-brand">Thendral Prabu</a>
+      <a href="#about" class="site-brand" aria-label="Thendral Prabu">
+        <img src="assets/images/logo-2-1.webp" alt="Thendral Prabu" class="site-brand-logo" height="76">
+      </a>
 
       <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
         <a href="#about" class="nav-link">About</a>
         <a href="#news" class="nav-link">News</a>
-        <a href="#projects" class="nav-link">Research &amp; Projects</a>
+        <div class="nav-dropdown">
+          <a href="#projects" class="nav-link dropdown-toggle" id="projectsDropdown" role="button" aria-expanded="false"
+            aria-haspopup="true">
+            Projects <span class="dropdown-arrow" aria-hidden="true">▾</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+            <a href="#projects" class="dropdown-item">All Projects</a>
+            <div class="dropdown-divider"></div>
+            <a href="robot-interrupted.html" class="dropdown-item">Robot Interrupted</a>
+            <a href="bci-art.html" class="dropdown-item">BCI for Art Therapy</a>
+            <a href="vr-navigation.html" class="dropdown-item">VR Navigation Training</a>
+            <a href="cta-rebrand.html" class="dropdown-item">CTA Transit App</a>
+            <a href="mason.html" class="dropdown-item">Mason &amp; Strings</a>
+            <a href="theatrical-designs.html" class="dropdown-item">Theatrical Scenic Design</a>
+          </div>
+        </div>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#education" class="nav-link">Education</a>
         <a href="#skills" class="nav-link">Skills</a>
+        <a href="#awards" class="nav-link">Awards</a>
         <a href="https://docs.google.com/document/d/14E_JzivV2DPRkLA8vcDeKpXIuigVomZk/edit?usp=drive_link&ouid=115083563516231911825&rtpof=true&sd=true"
           target="_blank" rel="noopener noreferrer" class="nav-link cv-link">
           CV <span class="ext-icon" aria-hidden="true">↗</span>
@@ -82,7 +99,7 @@
           </div>
 
           <h1 class="profile-name">Thendral Prabu</h1>
-          <p class="profile-title">Accessible Creative Technologist &amp; HCI Researcher</p>
+          <p class="profile-title">HCI Researcher</p>
 
           <div class="profile-affiliations">
             <div class="affiliation-item">
@@ -148,11 +165,12 @@
             <h2 class="sidebar-section-title">Research Interests</h2>
             <div class="tags-cluster">
               <span class="tag-pill">Human-Computer Interaction</span>
-              <span class="tag-pill">Accessibility &amp; Assistive Tech</span>
+              <span class="tag-pill">Social Computing</span>
+              <span class="tag-pill">Accessible Design</span>
               <span class="tag-pill">Brain-Computer Interfaces</span>
-              <span class="tag-pill">VR &amp; Haptic Wayfinding</span>
-              <span class="tag-pill">Physical Computing</span>
-              <span class="tag-pill">Inclusive Game Mechanics</span>
+              <span class="tag-pill">Trans Technologies</span>
+              <span class="tag-pill">Gender & Disability</span>
+
             </div>
           </div>
         </div>
@@ -168,101 +186,79 @@
           <h2 class="section-heading">About</h2>
           <div class="prose">
             <p>
-              I am an Accessible Creative Technologist and Human-Computer Interaction researcher based in Chicago.
-              Currently, I am a Graduate Research Assistant at <strong>PUSH Studio</strong> and an M.S. student in
-              Human-Computer Interaction at <strong>DePaul University</strong>.
+              Hi, I'm Thendral Prabu, currently a graduate research assistant and HCI master's student at DePaul
+              University in Chicago. My curiosity follows social computing, accessible systems, and systems of gender,
+              power and disability.
             </p>
-            <p>
-              My research centers on developing interfaces for emerging technologies that prioritize human agency,
-              dignity, and accessibility. At PUSH Studio, I work on non-invasive <strong>brain-computer interfaces
-                (BCIs)</strong> that enable people with limb differences to participate in digital art therapy and
-              operate assistive robotic tools using electroencephalogram (EEG) signals.
-            </p>
-            <p>
-              Before graduate study, I worked as a Systems Engineer at <strong>Bank of America</strong>, optimizing
-              automated continuous deployment infrastructure. My undergraduate research at <strong>The College of New
-                Jersey (TCNJ)</strong> focused on designing virtual reality wayfinding tools with Arduino haptic
-              vibration actuators, helping blind and low-vision individuals build spatial cognitive maps of indoor
-              spaces without physical risk. I also co-developed the musical puzzle platformer <em>Mason &amp;
-                Strings</em>, which was published on Steam and selected for the TooManyGames indie showcase.
-            </p>
-            <p class="personal-note">
-              Outside the lab, I am a two-time marathon runner working toward completing all six World Marathon Majors,
-              and I am currently training for my first triathlon.
-            </p>
+            <a href="about.html" class="about-more-link">More about me →</a>
           </div>
         </section>
 
         <!-- SECTION 2: NEWS -->
         <section class="content-section" id="news">
           <h2 class="section-heading">News &amp; Updates</h2>
-          <ul class="news-list">
-            <li class="news-item">
-              <span class="news-date">Fall 2026</span>
-              <div class="news-content">
-                Showcasing <em>Robot Interrupted</em> at the <strong>Loop Arts Fest</strong> on October 17, a one-day public art festival organized by the Chicago Loop Art Alliance—featuring a chalk-drawing robot with a touch screen interface for community co-creation.
-              </div>
-            </li>
-            <li class="news-item">
-              <span class="news-date">Spring 2026</span>
-              <div class="news-content">
-                Awarded the IMPACT grant for <em>Robot Interrupted</em>, an interactive public art installation enabling
-                the
-                public to co-create sidewalk drawings with a chalk-drawing Turtlebot via a custom Figma interface and
-                Python backend.
-              </div>
-            </li>
-            <li class="news-item">
-              <span class="news-date">Spring 2026</span>
-              <div class="news-content">
-                Joined PUSH Studio as a research assistant, developing a BCI art therapy system for people with limited
-                fine motor skills.
-              </div>
-            </li>
-            <li class="news-item">
-              <span class="news-date">Fall 2025</span>
-              <div class="news-content">
-                Completed the Chicago Transit Authority (CTA) accessibility redesign, presenting transit wayfinding
-                models for elevator outage transparency and ghost-bus alerts.
-              </div>
-            </li>
-            <li class="news-item">
-              <span class="news-date">Fall 2025</span>
-              <div class="news-content">
-                Started my M.S. in Human-Computer Interaction at DePaul University's School of Computing.
-              </div>
-            </li>
-            <li class="news-item">
-              <span class="news-date">2022 – 2024</span>
-              <div class="news-content">
-                Worked as Systems Engineer at Bank of America, triaging automated CI/CD tools and software deployment
-                pipelines.
-              </div>
-            </li>
-            <li class="news-item">
-              <span class="news-date">May 2022</span>
-              <div class="news-content">
-                Graduated from The College of New Jersey with dual degrees: B.S. in Computer Science and B.A. in
-                Interactive Multimedia.
-              </div>
-            </li>
-            <li class="news-item">
-              <span class="news-date">Oct 2021</span>
-              <div class="news-content">
-                <em>Mason &amp; Strings</em> officially released on Steam and showcased at the TooManyGames indie games
-                festival.
-              </div>
-            </li>
-          </ul>
+          <div class="news-scroll-wrap">
+            <ul class="news-list">
+              <li class="news-item">
+                <span class="news-date">October 2026</span>
+                <div class="news-content">
+                  Showcased <a href="robot-interrupted.html">Robot Interrupted</a> at the <strong>Loop Arts
+                    Fest</strong>.
+                </div>
+              </li>
+              <li class="news-item">
+                <span class="news-date">May 2026</span>
+                <div class="news-content">
+                  Awarded the IMPACT grant for <a href="robot-interrupted.html">Robot Interrupted</a>, an
+                  interactive public art installation.
+                </div>
+              </li>
+              <li class="news-item">
+                <span class="news-date">October 2026</span>
+                <div class="news-content">
+                  Joined PUSH Studio as a research assistant.
+                </div>
+              </li>
+              <li class="news-item">
+                <span class="news-date">December 2025</span>
+                <div class="news-content">
+                  Completed the <a href="cta-redesign.html">Chicago Transit Authority (CTA) accessibility redesign</a>.
+                </div>
+              </li>
+              <li class="news-item">
+                <span class="news-date">September 2025</span>
+                <div class="news-content">
+                  Started my M.S. in Human-Computer Interaction at DePaul University's School of Computing.
+                </div>
+              </li>
+              <li class="news-item">
+                <span class="news-date">2022 – 2024</span>
+                <div class="news-content">
+                  Worked as Systems Engineer at Bank of America.
+                </div>
+              </li>
+              <li class="news-item">
+                <span class="news-date">May 2022</span>
+                <div class="news-content">
+                  Graduated from The College of New Jersey with dual degrees: B.S. in Computer Science and B.A. in
+                  Interactive Multimedia.
+                </div>
+              </li>
+              <li class="news-item">
+                <span class="news-date">Oct 2021</span>
+                <div class="news-content">
+                  <em>Mason &amp; Strings</em> officially released on Steam and showcased at the TooManyGames indie
+                  games
+                  festival.
+                </div>
+              </li>
+            </ul>
+          </div>
         </section>
 
         <!-- SECTION 3: RESEARCH & SELECTED PROJECTS -->
         <section class="content-section" id="projects">
           <h2 class="section-heading">Selected Research &amp; Projects</h2>
-          <p class="section-intro">
-            A selection of research initiatives, assistive technology prototypes, and creative systems exploring
-            physical computing, spatial ergonomics, and accessible interaction.
-          </p>
 
           <div class="projects-list">
 
@@ -283,14 +279,23 @@
                     <span class="project-year">October 17, 2026</span>
                   </div>
                   <h3 class="project-title">
-                    <a href="robot-interrupted.html">Robot Interrupted: Interactive Street Art Installation &amp; Chalk-Drawing Robot</a>
+                    <a href="robot-interrupted.html">Robot Interrupted: Interactive Street Art Installation &amp;
+                      Chalk-Drawing Robot</a>
                   </h3>
                   <p class="project-authors">
-                    <strong>Thendral Prabu</strong> (Usability Testing &amp; Interaction Design), Muzammil Shaikh (Robotics Design), Helly Patel (Interface Design)
-                    <span class="project-mentors">Mentors: LeAnne Wagner (PUSH Studio &amp; SPARK Center) &amp; Umer Huzaifa, PhD (RAL Lab)</span>
+                    <strong>Thendral Prabu</strong> (Usability Testing &amp; Interaction Design), Muzammil Shaikh
+                    (Robotics Design), Helly Patel (Interface Design)
+                    <span class="project-mentors">Mentors: LeAnne Wagner (PUSH Studio &amp; SPARK Center) &amp; Umer
+                      Huzaifa, PhD (RAL Lab)</span>
                   </p>
                   <p class="project-summary">
-                    An interactive street art installation designed to encourage passersby to engage with a robot drawing chalk art on the street, premiering at the Loop Arts Fest organized by the Chicago Loop Art Alliance on October 17. Featuring a touch screen interface where attendees are encouraged to draw along with the robot, the installation reminds people that art is a collective process and takes many forms—blending UX design, robotics, and visual design to build community engagement in a public civic setting.
+                    An interactive street art installation designed to encourage passersby to engage with a robot
+                    drawing chalk art on the street, pshown at the Loop Arts Festival. Featuring a touch screen
+                    interface
+                    where attendees are encouraged to draw
+                    along with the robot, the installation reminds people that art is a collective process and takes
+                    many forms—blending UX design, robotics, and visual design to build community engagement in a public
+                    civic setting.
                   </p>
                   <div class="project-tags">
                     <span class="sub-tag">Usability Testing</span>
@@ -300,6 +305,7 @@
                     <span class="sub-tag">Touch Screen Interface</span>
                     <span class="sub-tag">Street Art Installation</span>
                     <span class="sub-tag">Loop Arts Fest</span>
+                    <span class="sub-tag">Working Hardware Demo</span>
                   </div>
                   <div class="project-links">
                     <a href="robot-interrupted.html" class="paper-link">View Full Project Page →</a>
@@ -312,9 +318,8 @@
             <article class="project-entry">
               <div class="project-grid">
                 <div class="project-image-wrap">
-                  <img src="assets/images/about_push_bci.png"
-                    alt="Brain-computer interface art therapy setup at PUSH Studio"
-                    class="project-thumb lightbox-trigger" data-full="assets/images/about_push_bci.png"
+                  <img src="assets/images/emotiv.png" alt="Brain-computer interface art therapy setup at PUSH Studio"
+                    class="project-thumb lightbox-trigger" data-full="assets/images/emotiv.png"
                     data-caption="Brain-Computer Interface Art System &amp; Robotic Control at PUSH Studio"
                     loading="lazy">
                 </div>
@@ -328,11 +333,12 @@
                     <a href="bci-art.html">Brain-Computer Interface for Art Therapy &amp; Robotic Control</a>
                   </h3>
                   <p class="project-authors">
-                    <strong>Thendral Prabu</strong> (Research Assistant) in collaboration with PUSH Studio team
+                    <strong>Thendral Prabu</strong> (UX Design & Programming), Muzammil Shaikh (Robotic Design),Leanne
+                    Wagner (Faculty Mentor)
                   </p>
                   <p class="project-summary">
                     Designing and optimizing the interaction pipeline for a non-invasive brain-computer interface (BCI)
-                    that enables individuals with limb differences to create digital art and operate robotic tools using
+                    people to operate a robot arm to create physical art using
                     EEG neural signals. Focused on reducing cognitive fatigue during electrode calibration, creating
                     intuitive motor imagery thresholds, and conducting participatory design sessions with target users.
                   </p>
@@ -350,7 +356,51 @@
               </div>
             </article>
 
-            <!-- PROJECT 2: VR HAPTIC WAYFINDING -->
+            <!-- PROJECT 3: TRANSMASC SEX ED TOOL -->
+            <article class="project-entry">
+              <div class="project-grid">
+                <div class="project-image-wrap">
+                  <img src="assets/images/transhealthconnect.png"
+                    alt="Two screens from the TransHealthConnect prototype: a community post feed with filtering options, and a medical article on safer sex practices for trans bodies"
+                    class="project-thumb lightbox-trigger" data-full="assets/images/transhealthconnect.png"
+                    data-caption="TransHealthConnect: Toward the Design of a Transmasc Sex Ed Tool" loading="lazy">
+                </div>
+                <div class="project-info">
+                  <div class="project-meta">
+                    <span class="project-affiliation">DePaul University · Indiana University Bloomington · HCI
+                      Research</span>
+                    <span class="meta-separator">·</span>
+                    <span class="project-year">2025 – Present</span>
+                  </div>
+                  <h3 class="project-title">
+                    Toward the Design of a Transmasc Sex Ed Tool
+                  </h3>
+                  <p class="project-authors">
+                    Jacob Boss, Mel Monier, <strong>Thendral Prabu</strong>
+                    <span class="project-mentors">Advisor: Patrick Shih</span>
+                  </p>
+                  <p class="project-summary">
+                    Building on survey findings from 52 transmasculine participants about how they seek sexual
+                    education—where participants reported low trust in school curricula and medical practitioners,
+                    relying instead on peers, romantic partners, and online media—this follow-up study conducts an
+                    Asynchronous Remote Community (ARC) with 20 transmasculine participants through Microsoft Teams.
+                    The study explores their experiences, perspectives, and design preferences to inform the design
+                    of a platform that combines educational rigor with community perspectives and reflects
+                    transmasculine bodies and experiences.
+                  </p>
+                  <div class="project-tags">
+                    <span class="sub-tag">Participatory Design</span>
+                    <span class="sub-tag">Asynchronous Remote Community</span>
+                    <span class="sub-tag">LGBTQ+ Health</span>
+                    <span class="sub-tag">User Research</span>
+                    <span class="sub-tag">Community-Centered Design</span>
+                    <span class="sub-tag">Microsoft Teams</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT 4: VR HAPTIC WAYFINDING -->
             <article class="project-entry">
               <div class="project-grid">
                 <div class="project-image-wrap">
@@ -370,7 +420,8 @@
                       Wayfinding</a>
                   </h3>
                   <p class="project-authors">
-                    <strong>Thendral Prabu</strong> (Lead Developer &amp; Researcher), Faculty Advisor
+                    <strong>Thendral Prabu</strong> (Lead Developer &amp; Researcher), Sharif Mohammad Shahnewaz Ferdous
+                    (Faculty Advisor)
                   </p>
                   <p class="project-summary">
                     Indoor environments present significant navigational barriers for visually impaired people, who
@@ -393,7 +444,7 @@
               </div>
             </article>
 
-            <!-- PROJECT 3: CTA TRANSIT ACCESSIBILITY -->
+            <!-- PROJECT 5: CTA TRANSIT ACCESSIBILITY -->
             <article class="project-entry">
               <div class="project-grid">
                 <div class="project-image-wrap">
@@ -436,7 +487,7 @@
               </div>
             </article>
 
-            <!-- PROJECT 4: MASON & STRINGS -->
+            <!-- PROJECT 6: MASON & STRINGS -->
             <article class="project-entry">
               <div class="project-grid">
                 <div class="project-image-wrap">
@@ -453,7 +504,7 @@
                     <span class="project-year">2020 – 2021</span>
                   </div>
                   <h3 class="project-title">
-                    <a href="mason.html">Mason &amp; Strings: Whimsical Musical Mechanics &amp; Spatial Level Design</a>
+                    <a href="mason.html">Mason &amp; Strings &amp; Spatial Level Design</a>
                   </h3>
                   <p class="project-authors">
                     <strong>Thendral Prabu</strong> (Lead Developer &amp; Level Designer), 5-Person Team
@@ -480,7 +531,7 @@
               </div>
             </article>
 
-            <!-- PROJECT 5: THEATRICAL SPATIAL DESIGN -->
+            <!-- PROJECT 7: THEATRICAL SCENIC DESIGN -->
             <article class="project-entry">
               <div class="project-grid">
                 <div class="project-image-wrap">
@@ -488,20 +539,22 @@
                     alt="Theatrical scenic design for Little Women and stage architecture"
                     class="project-thumb lightbox-trigger"
                     data-full="assets/images/framer/fuE5JeXpxPOFBjsTjkx2RssHFwI.jpg"
-                    data-caption="Theatrical Scenic &amp; Spatial Design" loading="lazy">
+                    data-caption="Theatrical Scenic Design" loading="lazy">
                 </div>
                 <div class="project-info">
                   <div class="project-meta">
-                    <span class="project-affiliation">TCNJ Theatre &amp; Peterborough Players</span>
+                    <span class="project-affiliation">Peterborough Players · TCNJ All College Theatre · TCNJ Musical
+                      Theater</span>
                     <span class="meta-separator">·</span>
-                    <span class="project-year">2019 – 2021</span>
+                    <span class="project-year">2019 – 2022</span>
                   </div>
                   <h3 class="project-title">
                     <a href="theatrical-designs.html">Theatrical Scenic Design: Spatial Storytelling &amp; Physical
                       Staging</a>
                   </h3>
                   <p class="project-authors">
-                    <strong>Thendral Prabu</strong> (Scenic Designer, Sound Designer &amp; Technician)
+                    <strong>Thendral Prabu</strong> (Scenic Intern &amp; Deck Crew — Peterborough Players; Scenic
+                    Designer&amp; Theatre Technician — TCNJ)
                   </p>
                   <p class="project-summary">
                     Environmental and spatial design for over 15 live stage productions, including Louisa May Alcott's
@@ -597,14 +650,31 @@
             <div class="cv-item">
               <div class="cv-header">
                 <div>
-                  <h3 class="cv-role">Scenic Designer &amp; Deck Crew</h3>
-                  <span class="cv-org">Peterborough Players &amp; TCNJ All College Theatre</span>
+                  <h3 class="cv-role">Scenic Intern &amp; Deck Crew</h3>
+                  <span class="cv-org">Peterborough Players · Peterborough, NH</span>
                 </div>
-                <span class="cv-date">2019 – 2021</span>
+                <span class="cv-date">Summer 2021</span>
               </div>
               <p class="cv-desc">
-                Collaborated with directors, technical directors, and carpenters on spatial set design, structural
-                construction, sound engineering, and deck crew operations across 15+ theatrical productions.
+                Worked as a scenic intern and deck crew member at a professional summer repertory theatre.
+                Collaborated with directors, technical directors, and carpenters on structural scenic construction,
+                scenic painting, and deck crew operations across multiple productions in repertory rotation.
+              </p>
+            </div>
+
+            <div class="cv-item">
+              <div class="cv-header">
+                <div>
+                  <h3 class="cv-role">Scenic Designer &amp; Theatre Technician</h3>
+                  <span class="cv-org">TCNJ All College Theatre, TCNJ Musical Theater &amp; Kendall Hall · TCNJ</span>
+                </div>
+                <span class="cv-date">2019 – 2022</span>
+              </div>
+              <p class="cv-desc">
+                As a club member of All College Theatre and TCNJ Musical Theater, served as scenic designer across
+                student productions. Concurrently worked as a theatre technician for
+                Kendall Hall, TCNJ's on-campus performance venue, supporting technical operations for departmental
+                and mainstage productions.
               </p>
             </div>
 
@@ -620,9 +690,9 @@
               <div class="cv-header">
                 <div>
                   <h3 class="cv-role">M.S. in Human-Computer Interaction</h3>
-                  <span class="cv-org">DePaul University · School of Computing / CDM</span>
+                  <span class="cv-org">DePaul University · School of Computing & Digital Media</span>
                 </div>
-                <span class="cv-date">2024 – Present (Exp. 2026)</span>
+                <span class="cv-date">2025 – Present (Exp. 2027)</span>
               </div>
               <p class="cv-desc">
                 Focus: Brain-Computer Interfaces, Assistive Emerging Technologies, Accessibility Design, Usability
@@ -638,91 +708,52 @@
                 </div>
                 <span class="cv-date">2018 – 2022</span>
               </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- SECTION 7: AWARDS & HONORS -->
+        <section class="content-section" id="awards">
+          <h2 class="section-heading">Awards &amp; Honors</h2>
+
+          <div class="cv-entries">
+
+            <div class="cv-item award-item">
+              <div class="cv-header">
+                <div>
+                  <h3 class="cv-role">IMPACT Grant</h3>
+                  <span class="cv-org">Chicago Loop Art Alliance</span>
+                </div>
+                <span class="cv-date">May 2026</span>
+              </div>
               <p class="cv-desc">
-                Dual degree bridging software engineering and interactive design. Coursework in Data Structures,
-                Computer Architecture, Physical Computing, Game Development, and Spatial Theatre Design.
+                Awarded funding for <em>Robot Interrupted</em>, an interactive public art installation.
               </p>
             </div>
-          </div>
-        </section>
 
-        <!-- SECTION 6: SKILLS & METHODS -->
-        <section class="content-section" id="skills">
-          <h2 class="section-heading">Methods &amp; Technical Skills</h2>
-
-          <div class="skills-grid">
-            <div class="skill-group">
-              <h3 class="skill-category-title">HCI &amp; Accessibility Research</h3>
-              <ul class="skill-list">
-                <li>Brain-Computer Interfaces (BCI)</li>
-                <li>EEG Signal Ergonomics</li>
-                <li>Accessibility Audits (WCAG 2.2 AAA)</li>
-                <li>Participatory Design with Disabled Users</li>
-                <li>Spatial Cognitive Mapping Studies</li>
-                <li>Contextual Inquiries &amp; Semi-Structured Interviews</li>
-                <li>Low- &amp; High-Fidelity Usability Testing</li>
-              </ul>
-            </div>
-
-            <div class="skill-group">
-              <h3 class="skill-category-title">Development &amp; Hardware</h3>
-              <ul class="skill-list">
-                <li>Unity 3D Engine (C#)</li>
-                <li>Arduino &amp; Physical Computing</li>
-                <li>Haptic Vibration Actuators (ERM)</li>
-                <li>Python (Data analysis, signal processing)</li>
-                <li>JavaScript / HTML5 / Modern CSS</li>
-                <li>Git, Version Control &amp; CI/CD Pipelines</li>
-                <li>SQL &amp; Relational Databases</li>
-              </ul>
-            </div>
-
-            <div class="skill-group">
-              <h3 class="skill-category-title">Design &amp; Spatial Systems</h3>
-              <ul class="skill-list">
-                <li>Figma &amp; Design Systems</li>
-                <li>Information Architecture</li>
-                <li>Theatrical Scenic Architecture &amp; Drafting</li>
-                <li>Adobe Illustrator &amp; Photoshop</li>
-                <li>2D Animation &amp; Keyframing</li>
-                <li>Sound Design &amp; Spatial Audio</li>
-                <li>Physical Prototyping &amp; Woodworking</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- SECTION 7: CONTACT -->
-        <section class="content-section" id="contact">
-          <h2 class="section-heading">Contact</h2>
-          <div class="prose">
-            <p>
-              I am always open to discussing research collaborations, assistive technology initiatives, brain-computer
-              interfaces, or full-time opportunities in human-computer interaction and creative technology.
-            </p>
-            <p>
-              The most reliable way to reach me is by email:
-            </p>
-
-            <div class="contact-box">
-              <div class="contact-row">
-                <span class="contact-label">Email:</span>
-                <a href="mailto:prabu.thendral03@gmail.com" class="contact-value">prabu.thendral03@gmail.com</a>
+            <div class="cv-item award-item">
+              <div class="cv-header">
+                <div>
+                  <h3 class="cv-role">CDM Graduate Dean's Scholarship</h3>
+                  <span class="cv-org">DePaul University</span>
+                </div>
+                <span class="cv-date">September 2025 - Present</span>
               </div>
-              <div class="contact-row">
-                <span class="contact-label">Curriculum Vitae:</span>
-                <a href="https://docs.google.com/document/d/14E_JzivV2DPRkLA8vcDeKpXIuigVomZk/edit?usp=drive_link&ouid=115083563516231911825&rtpof=true&sd=true"
-                  target="_blank" rel="noopener noreferrer" class="contact-value">
-                  View Full CV on Google Docs ↗
-                </a>
-              </div>
-              <div class="contact-row">
-                <span class="contact-label">Location:</span>
-                <span class="contact-value text-normal">Chicago, IL (Open to local &amp; remote collaborations)</span>
+            </div>
+
+            <div class="cv-item award-item">
+              <div class="cv-header">
+                <div>
+                  <h3 class="cv-role">Alpha Psi Omega, National Theater Honors Society</h3>
+                  <span class="cv-org">The College of New Jersey</span>
+                </div>
+                <span class="cv-date">May 2021- Present</span>
               </div>
             </div>
           </div>
         </section>
+
 
       </main>
     </div>
@@ -732,7 +763,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="footer-text">
-        &copy; 2026 Thendral Prabu · Chicago, Illinois. Accessible Creative Technologist &amp; HCI Researcher.
+        &copy; 2026 Thendral Prabu · Chicago, Illinois. &amp; HCI Researcher.
       </p>
       <div class="footer-actions">
         <a href="#about" class="back-to-top">Back to top ↑</a>

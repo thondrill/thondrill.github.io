@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
       btnMobileMenu.setAttribute('aria-expanded', isOpen);
     });
 
-    // Close menu when clicking any nav link
-    navLinksContainer.querySelectorAll('a').forEach((link) => {
+    // Close menu when clicking any nav link (except dropdown toggle)
+    navLinksContainer.querySelectorAll('a:not(.dropdown-toggle)').forEach((link) => {
       link.addEventListener('click', () => {
         navLinksContainer.classList.remove('mobile-open');
         btnMobileMenu.setAttribute('aria-expanded', 'false');
@@ -95,6 +95,31 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Dropdown Handling (Touch & Mobile friendly)
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
+  dropdowns.forEach((dd) => {
+    const toggle = dd.querySelector('.dropdown-toggle');
+    if (!toggle) return;
+
+    toggle.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const isOpen = dd.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen);
+      }
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    dropdowns.forEach((dd) => {
+      if (!dd.contains(e.target)) {
+        dd.classList.remove('open');
+        const toggle = dd.querySelector('.dropdown-toggle');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
 
   // -------------------------------------------------------------------------
   // 4. Accessible Minimalist Lightbox for Project Images
@@ -150,4 +175,45 @@ document.addEventListener('DOMContentLoaded', () => {
       closeLightbox();
     }
   });
+
+  // -------------------------------------------------------------------------
+  // 5. Horizontal Image Scroller
+  // -------------------------------------------------------------------------
+  const aboutScroller = document.getElementById('aboutScroller');
+  const btnScrollerPrev = document.getElementById('btnScrollerPrev');
+  const btnScrollerNext = document.getElementById('btnScrollerNext');
+
+  if (aboutScroller && btnScrollerPrev && btnScrollerNext) {
+    const scrollAmount = 300;
+
+    btnScrollerPrev.addEventListener('click', () => {
+      aboutScroller.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    btnScrollerNext.addEventListener('click', () => {
+      aboutScroller.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    const updateScrollerButtons = () => {
+      const atStart = aboutScroller.scrollLeft <= 5;
+      const atEnd = aboutScroller.scrollLeft + aboutScroller.clientWidth >= aboutScroller.scrollWidth - 5;
+      btnScrollerPrev.disabled = atStart;
+      btnScrollerNext.disabled = atEnd;
+    };
+
+    aboutScroller.addEventListener('scroll', updateScrollerButtons, { passive: true });
+    window.addEventListener('resize', updateScrollerButtons, { passive: true });
+
+    // Keyboard navigation when focused
+    aboutScroller.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        aboutScroller.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      } else if (e.key === 'ArrowRight') {
+        aboutScroller.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
+    });
+
+    // Initial check
+    setTimeout(updateScrollerButtons, 100);
+  }
 });

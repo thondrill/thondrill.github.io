@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Theatrical Scenic Design: Spatial Storytelling — Thendral Prabu</title>
+  <title>Theatrical Scenic Design | Thendral Prabu</title>
   <meta name="description"
     content="Scenic and spatial design for over 15 live productions across TCNJ Musical Theatre, All College Theatre, and professional summer theatre at Peterborough Players.">
 
@@ -32,14 +32,31 @@
   <header class="site-header">
     <div class="header-inner">
       <div class="breadcrumb">
-        <a href="index.html" class="site-brand">Thendral Prabu</a>
+        <a href="index.html" class="site-brand" aria-label="Thendral Prabu">
+          <img src="assets/images/logo-2-1.webp" alt="Thendral Prabu" class="site-brand-logo" height="76">
+        </a>
         <span class="crumb-separator">/</span>
         <span class="crumb-current">Theatrical Designs</span>
       </div>
 
       <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
         <a href="index.html#about" class="nav-link">About</a>
-        <a href="index.html#projects" class="nav-link active">Projects</a>
+        <div class="nav-dropdown">
+          <a href="index.html#projects" class="nav-link dropdown-toggle active" id="projectsDropdown" role="button"
+            aria-expanded="false" aria-haspopup="true">
+            Projects <span class="dropdown-arrow" aria-hidden="true">▾</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+            <a href="index.html#projects" class="dropdown-item">All Projects</a>
+            <div class="dropdown-divider"></div>
+            <a href="robot-interrupted.html" class="dropdown-item">Robot Interrupted</a>
+            <a href="bci-art.html" class="dropdown-item">BCI for Art Therapy</a>
+            <a href="vr-navigation.html" class="dropdown-item">VR Navigation Training</a>
+            <a href="cta-rebrand.html" class="dropdown-item">CTA Transit App</a>
+            <a href="mason.html" class="dropdown-item">Mason &amp; Strings</a>
+            <a href="theatrical-designs.html" class="dropdown-item active">Theatrical Scenic Design</a>
+          </div>
+        </div>
         <a href="index.html#experience" class="nav-link">Experience</a>
         <a href="https://docs.google.com/document/d/14E_JzivV2DPRkLA8vcDeKpXIuigVomZk/edit?usp=drive_link&ouid=115083563516231911825&rtpof=true&sd=true"
           target="_blank" rel="noopener noreferrer" class="nav-link cv-link">
@@ -78,9 +95,9 @@
         <span class="meta-separator">·</span>
         <span>Spatial &amp; Scenic Architecture</span>
       </div>
-      <h1 class="project-main-title">Theatrical Scenic Design: Spatial Storytelling &amp; Physical Staging</h1>
+      <h1 class="project-main-title">Theatrical Scenic Design</h1>
       <p class="project-lead">
-        Scenic design, scale architectural drafting, and physical set construction for over 15 live stage productions.
+        Scenic design and physical set construction for over 15 live stage productions.
         Designing immersive physical environments rooted in text analysis, black box sightlines, and tactile
         storytelling.
       </p>
@@ -152,9 +169,7 @@
           </div>
           <p class="theatre-show-desc">
             Louisa May Alcott's renowned <em>Little Women</em> was heavily inspired by the original Orchard House in
-            Concord and performed in the Don Evans Black Box Theatre. The set balanced warm domestic intimacy with
-            flexible multi-level acting zones, enabling rapid seamless transitions between the March family parlor, the
-            attic writing haven, and European travel locales.
+            Concord and performed in the Don Evans Black Box Theatre.
           </p>
           <figure class="figure-center">
             <img src="assets/images/framer/fuE5JeXpxPOFBjsTjkx2RssHFwI.jpg"
