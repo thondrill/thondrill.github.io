@@ -216,4 +216,67 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial check
     setTimeout(updateScrollerButtons, 100);
   }
+
+  // -------------------------------------------------------------------------
+  // 6. BibTeX Toggle & Citation Copying
+  // -------------------------------------------------------------------------
+  document.querySelectorAll('.btn-bibtex-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const panel = document.getElementById(targetId);
+      if (panel) {
+        const isExpanded = panel.classList.toggle('active');
+        btn.setAttribute('aria-expanded', isExpanded);
+        btn.textContent = isExpanded ? 'Hide BibTeX' : 'BibTeX';
+      }
+    });
+  });
+
+  document.querySelectorAll('.btn-copy-citation').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetCode = btn.closest('.bibtex-panel')?.querySelector('.bibtex-code');
+      if (targetCode) {
+        navigator.clipboard.writeText(targetCode.textContent.trim()).then(() => {
+          const originalText = btn.textContent;
+          btn.textContent = 'Copied!';
+          setTimeout(() => {
+            btn.textContent = originalText;
+          }, 2000);
+        }).catch(() => {
+          // Fallback selection if clipboard api fails
+          const range = document.createRange();
+          range.selectNodeContents(targetCode);
+          const sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+        });
+      }
+    });
+  });
+
+  // -------------------------------------------------------------------------
+  // 7. Writing Category Filter (writing.html)
+  // -------------------------------------------------------------------------
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const writingEntries = document.querySelectorAll('.writing-entry[data-category]');
+
+  if (filterButtons.length > 0 && writingEntries.length > 0) {
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const category = btn.getAttribute('data-filter');
+
+        filterButtons.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        writingEntries.forEach((entry) => {
+          const entryCats = entry.getAttribute('data-category') || '';
+          if (category === 'all' || entryCats.split(' ').includes(category)) {
+            entry.style.display = '';
+          } else {
+            entry.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
 });
