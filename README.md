@@ -1,1 +1,0 @@
-# thendralp.github.io
